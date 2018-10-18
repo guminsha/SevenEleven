@@ -1,0 +1,141 @@
+body{
+    background-image: url("../imagens/BackgroundInicial.png");
+    background-size: 1920px 950px;
+    color: white;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+footer{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    color: black;
+    padding-bottom: 30px;
+    padding: 5px;
+    margin-top: 1%;
+}
+
+#divCorpo{
+    border: solid 2px white;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 0px 10px 10px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    color: black;
+}
+
+#divPesquisa{
+    margin: 0.5%;
+    position: relative;
+    left: 5%;
+}
+
+#inputPesq{
+    position: relative;
+    border-radius: 10px;
+    width: 30%;
+    left: 8%;
+    margin-top: 6px;
+    font-size: 20px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.btnPesquisar{
+    position: relative;
+    left: 8%;
+    background-color: purple; /* Green */
+    border: solid 2px black;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 0.5%;
+}
+
+#divVideo{
+    border: solid 2px blue;
+    float: left;
+    margin: 10px;
+}
+
+#divDestaque{
+    border: 2px solid black;
+    background-color: rgba(128, 33, 150, 0.8);
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 1%;
+    position: relative;
+    left: 44%;
+    width: 55%;
+    margin-top: 0.5%;
+}
+
+#divDestaqueTexto{
+    position: relative;
+    right: 70%;
+}
+
+#divConteudoDestaque{
+    margin-top: 9.5%;
+}
+
+#divRecomendados{
+    border: 2px solid black;
+    background-color: rgba(128, 33, 150, 0.8);
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 1%;
+    position: relative;
+    margin-top: 0.5%;
+}
+
+
+.divFilme{
+    display: block;
+    margin-right: 2%;
+    width: 95%;
+    margin: 1%;
+}
+
+
+.capaFilme{
+    float: left;
+    margin-right: 7px;
+    border-radius: 30px;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+

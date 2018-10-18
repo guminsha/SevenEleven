@@ -1,0 +1,122 @@
+body{
+	background-image: url("../imagens/backgroundLogin.png");
+	background-color: #696969;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: Comic Sans MS, Comic Sans, cursive;
+	font-size: 18px;
+}
+
+.alert{
+
+	margin: 8% 0% 0% 45%;
+	color: snow;
+	font-weight: bolder;
+}
+
+
+#divQuad{
+	border: 3px black solid;
+	border-radius: 10px;
+	left: 37.5%;
+	top: 23%;
+	width: 25%;
+	height: 53%;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+#logo{
+	width: 23%;
+	height: 18%;
+	position: fixed;
+	left: 38%;
+	top: 22%;
+}
+
+#divform{
+    position: fixed;
+    left: 39%;
+    top: 40%;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+}
+
+#senha{
+	width: 80%;
+	margin-bottom: 15%;
+	text-align: left;
+	font-family: Comic Sans MS, Comic Sans, cursive;
+	font-size: 15px;
+}
+
+#email{
+	width: 80%;
+	margin-bottom: 3%;
+	text-align: left;
+	font-family: Comic Sans MS, Comic Sans, cursive;
+	font-size: 15px;
+}
+
+#emailNome{
+	padding-right: 12px;
+}
+
+.userRadio{
+	position: relative;
+	right:10%;
+}
+
+.admRadio{
+	position: relative;
+	left: 13%;
+}
+
+.link {
+	color: blue;
+	text-decoration: none;
+	position: relative;
+	left: -25%;
+	top: 10%;
+}
+
+#divLinks{
+	margin-top: 5%;
+	margin-bottom: -5%;
+}
+
+#divLogin{
+	margin-top: 5%;
+}
+
+#linkNovo{
+	left: -23%;
+}
+
+#linkEsqueceu{
+	left: -20%;
+}
+
+.btn-submit{
+    width: 30%;
+    border:1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    margin-left: 10%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 2px;
+}
+
+.grid-item {
+  padding: 2px;
+  text-align: center;
+}
