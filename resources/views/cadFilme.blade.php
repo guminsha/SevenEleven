@@ -84,6 +84,10 @@
                 <label for="inputCapa">Imagem da capa:</label>
                 <input type="file" class="form-control" id="inputCapa" name='capaFilme'>
             </div>
+            <div id="divUpload">
+                <label for="inputUpload">Upload do Arquivo/URL:</label>
+                <input type="file" class="form-control" id="uploadFilme" name='uploadFilme'>
+            </div>
             <div id="divButtonCad">
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
             </div>

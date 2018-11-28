@@ -33,6 +33,14 @@ h1{
 	right: 18%;
 }
 
+#divUpload{
+	width: 25%;
+	float: right;
+	margin-top: 8%;
+	position: absolute;
+	right: 18%;
+}
+
 #divButtonCad{
 	left: 90%;
 	position: relative;

@@ -21,21 +21,28 @@ Route::group(['prefix' => '/'], function(){
     Route::get('/','LoginController@login')->name('paginaInicial');
     Route::post('/logar','LoginController@verificaLogin')->name('validarLogin');
     Route::get('/pagPrincipal','LoginController@redirecionarPagina')->name('principal');
+    
+});
+
+Route::group(['prefix' => 'vip'], function(){
+    Route::get('/planos', 'AtivarVipController@showPlanos')->name('planosVip');
+    Route::post('/pagamento', 'AtivarVipController@showPagamento')->name('pagamentoVip');
 });
 
 Route::group(['prefix' =>'cliente'], function(){
 
-    Route::get('/cadastrarCliente', 'ClienteController@show')->name('paginaCadUser');
-    Route::post('/salvarCliente', 'ClienteController@cadastrar')->name('addCliente');    
+    Route::get('/cadastrar', 'ClienteController@show')->name('paginaCadUser');
+    Route::post('/salvar', 'ClienteController@cadastrar')->name('addCliente');
 });
 
 Route::group(['prefix' =>'funcionario'], function(){
 
-    Route::get('/cadastrarFuncionario', 'FuncionarioController@show')->name('paginaCadFunc');    
+    Route::get('/cadastrar', 'FuncionarioController@show')->name('paginaCadFunc');    
 });
 
 Route::group(['prefix' =>'filme'], function(){
 
-    Route::get('/cadastrarFilme', 'FilmeController@show')->name('paginaCadFilme');
-    Route::post('/salvarFilme', 'FilmeController@cadastrarFilme')->name('addFilme');      
+    Route::get('/cadastrar', 'FilmeController@show')->name('paginaCadFilme');
+    Route::post('/salvar', 'FilmeController@cadastrarFilme')->name('addFilme');      
 });
+

@@ -9,7 +9,7 @@ class ClienteController extends Controller
     public function show()
     {
         return view('cadUser');
-    } 
+    }
 
     public function cadastrar(Request $request)
     {

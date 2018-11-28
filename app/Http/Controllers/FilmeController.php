@@ -23,7 +23,8 @@ class FilmeController extends Controller
             'precoAluguel' => 'required|regex:/^\d*(\.\d{1,2})?$/',
             'precoVenda' => 'required|regex:/^\d*(\.\d{1,2})?$/',
             'disponibilidade' => 'required',
-            'capaFilme' => 'required|image'
+            'capaFilme' => 'required|image',
+            'uploadFilme' => 'required'
             ]);
 
             $extesao = $request->capaFilme->extension();

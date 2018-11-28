@@ -1,0 +1,129 @@
+body{
+    background-image: url("../imagens/BackgroundVipPlanos.png");
+    background-size: 1920px 950px;
+    color: white;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.btn-submit{
+    border:2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    padding: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    margin: 2.1%;
+    margin-right: 3%;
+    margin-top: 14%;
+    float: right;
+}
+
+#divDesconto{
+    margin: 2.1%;
+    margin-left: 3%;
+    float: left;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+#mensal{
+    border-radius: 5%;
+    position: relative;
+    margin: 2.1%;
+    margin-left: 3%;
+    margin-top: 7%;
+    margin-bottom: 1%;
+}
+
+#trimestral{
+    border-radius: 5%;
+    position: relative;
+    margin: 2.1%;
+    margin-top: 7%;
+    margin-bottom: 1%;
+}
+
+#semestral{
+    border-radius: 5%;
+    position: relative;
+    margin: 2.1%;
+    margin-top: 7%;
+    margin-bottom: 1%;
+}
+
+#anual{
+    border-radius: 5%;
+    position: relative;
+    margin: 2.1%;
+    margin-top: 7%;
+    margin-bottom: 1%;
+}
+
+.radioMensal{
+    position: relative;
+    left: 7%;
+    padding-left: 10px;
+    font-family: cursive;
+    color: coral;
+    font-size: 26px;
+    border: dashed 2px;
+    border-radius: 8px;
+    border-color: rgb(128, 33, 150);
+}
+
+#labelMensal{
+    margin-right: 5%;
+}
+
+.radioTrimestral{
+    position: relative;
+    left: 17%;
+    padding-left: 10px;
+    font-family: cursive;
+    color: silver;
+    font-size: 26px;
+    border: dashed 2px;
+    border-radius: 8px;
+    border-color: rgb(128, 33, 150);
+}
+
+#labelTrimestral{
+    margin-right: 5%;
+}
+
+.radioSemestral{
+    position: relative;
+    left: 28%;
+    padding-left: 10px;
+    font-family: cursive;
+    color: gold;
+    font-size: 26px;
+    border: dashed 2px;
+    border-radius: 8px;
+    border-color: rgb(128, 33, 150);
+}
+
+#labelSemestral{
+    margin-right: 5%;
+}
+
+.radioAnual{
+    position: relative;
+    left: 38%;
+    padding-left: 10px;
+    font-family: cursive;
+    color:rgb(46, 203, 126);
+    font-size: 26px;
+    border: dashed 2px;
+    border-radius: 8px;
+    border-color: rgb(128, 33, 150);
+}
+
+#labelAnual{
+    margin-right: 5%;
+}
