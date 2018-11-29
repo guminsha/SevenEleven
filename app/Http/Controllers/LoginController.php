@@ -28,8 +28,8 @@ class LoginController extends Controller
        }
     }
 
-    public function logout(Request $request){
-        $request->session()->flush();
+    public function logout(){
+        session()->flush();
         return redirect()->route('paginaInicial');
     }
 

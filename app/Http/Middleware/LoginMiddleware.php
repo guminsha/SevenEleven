@@ -15,6 +15,11 @@ class LoginMiddleware
      */
     public function handle($request, Closure $next)
     {
+        if(!session('usuario'))
+        {
+            return redirect()->route('paginaInicial');
+        }
+        
         return $next($request);
     }
 }
