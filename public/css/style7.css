@@ -1,0 +1,16 @@
+body{
+    background-image: url("../imagens/backgroundLogin.png");
+    background-size: 1920px 950px;
+    color: white;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#divCorpo{
+    border: solid 2px white;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 0px 10px 10px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    color: black;
+}

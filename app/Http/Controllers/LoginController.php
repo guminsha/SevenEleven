@@ -19,12 +19,18 @@ class LoginController extends Controller
             ]);
         if($request->email == "teste@teste.com" && $request->senha == "123")
        {
+           session(['usuario' => 'Rougert']);
             return view('pagInicial');  
        }
        else
        {
             return redirect('/')->with('invalido', true);
        }
+    }
+
+    public function logout(Request $request){
+        $request->session()->flush();
+        return redirect()->route('paginaInicial');
     }
 
     public function redirecionarPagina()
