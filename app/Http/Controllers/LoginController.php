@@ -20,7 +20,7 @@ class LoginController extends Controller
         if($request->email == "teste@teste.com" && $request->senha == "123")
        {
            session(['usuario' => 'Rougert']);
-            return view('pagInicial');  
+            return redirect()->route('principal');
        }
        else
        {
@@ -35,6 +35,6 @@ class LoginController extends Controller
 
     public function redirecionarPagina()
     {
-        return redirect()->route('principal');
+        return view("pagInicial");
     }
 }

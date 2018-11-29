@@ -21,7 +21,7 @@ Route::group(['prefix' => '/'], function(){
     Route::get('/','LoginController@login')->name('paginaInicial');
     Route::post('/logar','LoginController@verificaLogin')->name('validarLogin');
     Route::get('logout', 'LoginController@logout')->name('logout');
-    Route::get('/pagPrincipal','LoginController@redirecionarPagina')->name('principal');
+    Route::get('/home','LoginController@redirecionarPagina')->name('principal');
     
 });
 
