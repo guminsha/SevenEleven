@@ -15,10 +15,10 @@ class CriandoTabelaPagamentos extends Migration
     {
         Schema::create('pagamentos', function (Blueprint $table) {
             $table->increments('id_pagamento');
-            $table->string('descricao');
+            $table->string('plano');
             $table->float('desconto',5,2);
-            $table->float('preco_unitario',5,2);
-            $table->float('preco_final',5,2);
+            $table->float('preco',5,2);
+            $table->float('total_compra',5,2);
             $table->date('data_da_compra');
             $table->timestamps();
         });

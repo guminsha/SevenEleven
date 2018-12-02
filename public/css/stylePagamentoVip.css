@@ -5,16 +5,22 @@ body{
     font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
+
 #divCorpo{
     border: solid 2px white;
     background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 20px;
     font-family: Comic Sans MS, Comic Sans, cursive;
     color: black;
+    padding: 1%;
+    margin: 0.5%;
 }
 
+#forma{
+    padding-top: 50px;
+}
 #cartaoCredito{
-    padding: 100px;
+    padding-top: 20px;
 }
 
 #anoCartao, #mesCartao{
@@ -25,8 +31,56 @@ body{
     position: relative;
     left: 76px;
     bottom: 38px;
+    width: 80px;
 }
 
 #boletoBancario, #cartaoCredito{
     display: none;
+}
+
+.textoComum{
+    font-size: 20px;
+    position: relative;
+}
+
+.textoComum2{
+    font-size: 18px;
+    position: relative;
+}
+
+#codigoCartao{
+    width: 70px;
+}
+
+#tipoParcela{
+    width: 200px;
+}
+
+#donoCartao{
+    width: 450px;
+}
+
+#tirarEspaco{
+    margin-top: -2%;
+    position: relative;
+}
+
+#divButtonCart{
+	left: 90%;
+	position: relative;
+	width: 8%;
+	margin-top: 5%;
+}
+
+#divButtonBol{
+	position: relative;
+	width: 8%;
+	margin-top: 1%;
+}
+
+.btn-primary{
+	width: 100%;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
 }

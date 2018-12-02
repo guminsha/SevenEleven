@@ -10,86 +10,84 @@
         <header>
         </header>
         <div id="divCorpo">
-            <p>Olá, {{session('usuario')}}!</p>
-            
-
-            <div>
-                <h1>Resumo da Compra: </h1>
-                <h2> Descrição da compra: </h2>
-                <h4>
-                        {{$infoPlano['descricao']}}
-                </h4>
-                <h2> Preço Unitario </h2>
-                <h4>
-                        R${{$infoPlano['preco_unitario']}}
-                </h4>
-                <h2>Desconto: </h2>
-                <h4>
-                        R${{$infoPlano['desconto']}}
-                </h4>
-                <h2> Preço Total </h2>
-                <h4>
-                        R${{$infoPlano['preco_final']}}
-                </h4>
+            <div class="textoComum">
+                <p>Olá, {{session('usuario')}}! Aqui estão mais informações sobre a compra:</p>
             </div>
-            <h1>Escolha a forma de pagamento: </h1>
+            <div>
+                <h4>Plano Selecionado: </h4>
+                <h5>
+                        {{$infoPlano['plano']}}
+                </h5>
+                <h4>Preço:</h4>
+                <h5>
+                        R${{$infoPlano['preco']}}
+                </h5>
+                <h4>Desconto:</h4>
+                <h5>
+                        R${{$infoPlano['desconto']}}
+                </h5>
+                <h4>Total da compra:</h4>
+                <h5>
+                        R${{$infoPlano['total_compra']}}
+                </h5>
+            </div>
+            <h4 id="forma">Escolha a forma de pagamento: </h4>
 
             <div id="radioFormaPagamento">
                 <input type="radio" id="idBoleto" name="formaPagamento"onclick="showAndHideDiv()"/>
-                <label for="idBoleto">Boleto</label>
+                <label for="idBoleto" class="textoComum">Boleto</label>
 
                 <input type="radio" id="idCartao" name="formaPagamento" onclick="showAndHideDiv()"/>
-                <label for="idCartao">Cartão de Crédito</label>
+                <label for="idCartao" class="textoComum">Cartão de Crédito</label>
             </div>
 
             <div id="boletoBancario">
                 <form action="{{route('efetuadoVip')}}" method="POST">
                 @csrf
-                <h1> Clique no botão para gerar o boleto</h1>
-                <button class="btn btn-primary" type="submit">Gerar Boleto</button>
+                <div id="divButtonBol">
+                    <button class="btn btn-primary" type="submit">Gerar Boleto</button>
+                </div>
                 </form>
             </div>
 
             <div id="cartaoCredito">
                 <form action="{{route('efetuadoVip')}}" method="POST">
                 @csrf
-                        <h1> Informe os dados do cartão</h1>
+                        <h4> Informe os dados do cartão:</h4>
                         <div class="form-row">
-                            
-                            <div class="form-group col-md-3">    
-                                <label for="cartao">Número do cartão:</label>
-                                <input type="text" class="form-control" id="cartao"  placeholder="Digite o número do cartão">
+                            <div class="form-group col-md-2">    
+                                <label for="cartao" class="textoComum2">Número do cartão:</label>
+                                <input type="text" class="form-control" id="cartao"  placeholder="XXXX XXXX XXXX XXXX">
                             </div>                         
-
-                            <div class="form-group col-md-3">
-                                <label for="mesCartao">Data de validade:</label>
-                                <input type="number" class="form-control" id="mesCartao"  placeholder="MM" min="1" max="12">
-                                <input type="number" class="form-control" id="anoCartao" placeholder="AA">
-                            </div>
-
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="donoCartao">Nome do dono do cartão:</label>
-                                <input type="text" class="form-control" id="donoCartao" placeholder="Digite o nome do dono do cartão">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="codigoCartao">Código de segurança:</label>
-                                <input type="number" class="form-control" id="codigoCartao" placeholder="Código de segurança" min="0" maxlength="3" size="4">
+                            <div class="form-group col-md-2">
+                                <label for="mesCartao" class="textoComum2">Data de validade:</label>
+                                <input type="text" class="form-control" id="mesCartao"  placeholder="MM" maxlength="2">
+                                <input type="text" class="form-control" id="anoCartao" placeholder="AAAA" minlength="4" maxlength="4">
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="parcelas">Escolha a quantidade de parcelas:</label>
-                            <select class="custom-select" id="tipoParcela">
-                                @foreach($tipoParcelas as $parcela)
-                                <option> {{$parcela}} </option>
-                                @endforeach
-                            </select>
+                        <div id="tirarEspaco">
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="donoCartao" class="textoComum2">Nome do titular do cartão:</label>
+                                    <input type="text" class="form-control" id="donoCartao" placeholder="Ex.: CARLOS A F DE OLIVEIRA">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="codigoCartao" class="textoComum2">Código de segurança:</label>
+                                    <input type="text" class="form-control" id="codigoCartao" minlength="3" maxlength="3">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="parcelas"class="textoComum2">Quantidade de parcelas:</label><br />
+                                <select class="custom-select" id="tipoParcela">
+                                    @foreach($tipoParcelas as $parcela)
+                                    <option> {{$parcela}} </option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
-
-                        <button type="submit" class="btn btn-primary">Finalizar Compra</button>
+                        <div id="divButtonCart">
+                            <button type="submit" class="btn btn-primary">Finalizar Compra</button>
+                        </div>
                     </form>
             </div>
         </div>
