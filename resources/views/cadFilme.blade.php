@@ -15,9 +15,11 @@
         @endforeach
     </div>
     @endif
-
 	<div id="formulario">
 		<h1>Cadastro Filme</h1>
+        <div id="textObrigatorio">
+        <i><p>*Todos os campos são de preenchimento obrigatório!</p></i>
+        </div>
         <div id="divCampos">
             <form action="{{route('addFilme')}}" method="post" enctype="multipart/form-data">
             @csrf
@@ -29,13 +31,13 @@
                 <div class="form-group col-md-4">
                     <label for="inputClassificacao">Classificação:</label>
                     <select id="inputClassificacao" name="classificacao" class="form-control">
-                        <option selected>Escolher...</option>
-                        <option>Livre</option>
-                        <option>10</option>
-                        <option>12</option>
-                        <option>14</option>
-                        <option>16</option>
-                        <option>18</option>
+                        <option selected value="Escolher">Escolher...</option>
+                        <option value="Livre">Livre</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
                     </select>
                 </div>
                 <div id="divSinop">
@@ -51,13 +53,13 @@
                 <div class="form-group col-md-4">
                     <label for="inputCategoria">Categoria:</label>
                     <select id="inputCategoria" class="form-control" name="categoria">
-                        <option selected>Escolher...</option>
-                        <option>Ação</option>
-                        <option>Aventura</option>
-                        <option>Comedia</option>
-                        <option>Drama</option>
-                        <option>Musical</option>
-                        <option>Terror</option>
+                        <option selected value="Escolher">Escolher...</option>
+                        <option value="Ação">Ação</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Terror">Terror</option>
                     </select>
                 </div>
                 <div class="form-group col-md-3">
@@ -71,17 +73,17 @@
                 <div id="divRadio">
                     <label for="">Disponibilidade:</label>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="disponibilidade" id="inlineRadio1" value="option1">
+                        <input class="form-check-input" type="radio" name="disponibilidade" id="inlineRadio1" value="1">
                         <label class="form-check-label" for="inlineRadio1">Disponível</label>
 					</div>
 					<div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="disponibilidade" id="inlineRadio2" value="option2">
+                        <input class="form-check-input" type="radio" name="disponibilidade" id="inlineRadio2" value="0">
                         <label class="form-check-label" for="inlineRadio2">Indisponível</label>
 					</div>
 				</div>
             </div>
             <div id="divImagem">
-                <label for="inputCapa">Imagem da capa:</label>
+                <label for="inputCapa">Capa do Filme:</label>
                 <input type="file" class="form-control" id="inputCapa" name='capaFilme'>
             </div>
             <div id="divUpload">

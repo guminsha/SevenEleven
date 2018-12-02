@@ -41,7 +41,8 @@ Route::group(['prefix' =>'cliente'], function(){
 Route::group(['prefix' =>'funcionario','middleware' => ['login']], function(){
 
     Route::get('/gerenciamento', 'FuncionarioController@showGerenciamento')->name('gerenciamento');
-    Route::get('/cadastrar', 'FuncionarioController@show')->name('paginaCadFunc');    
+    Route::get('/cadastrar', 'FuncionarioController@show')->name('paginaCadFunc');
+    Route::post('/salvar', 'FuncionarioController@cadastrar')->name('addFuncionario');
 });
 
 Route::group(['prefix' =>'filme','middleware' => ['login']], function(){

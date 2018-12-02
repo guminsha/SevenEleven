@@ -14,7 +14,7 @@ class AtivarVipController extends Controller
 
     public function showEfetuado()
     {
-        echo "Compra efetuada!";
+        echo "Compra efetuada! Enviaremos um e-mail com mais informações.";
     }
 
     public function showPagamento(Request $request)

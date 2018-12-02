@@ -53,6 +53,6 @@ class ClienteController extends Controller
 
 
 
-        return redirect()->route('paginaInicial')->with('invalido', 'Cliente cadastrado com sucesso');
+        return redirect()->route('paginaInicial')->with('invalido', 'Cadastrado realizado com sucesso');
     }
 }

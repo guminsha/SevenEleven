@@ -18,7 +18,7 @@ class FuncionariosSeeder extends Seeder
             'senha' => '123',
             'data_nascimento' => '1990-10-10',
             'data_admissao' => '1990-10-10',
-            'nivel_permissao' => '1',
+            'nivel_permissao' => '3',
             'sexo' => 'M',
             'telefone' => 'Alterar',
             'endereco_id' => '1',

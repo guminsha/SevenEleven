@@ -31,7 +31,7 @@ class LoginController extends Controller
             }
             else
             {
-                return redirect('/')->with('invalido', 'Login ou senha erradas!');
+                return redirect('/')->with('invalido', 'Login ou senha incorretos!');
             }
         } 
         else if($request->logintype == "adm"){
@@ -42,11 +42,12 @@ class LoginController extends Controller
             {
                 session(['usuario' => $funcionario->nome]);
                 session(['usuario_permissao' => $funcionario->nivel_permissao]);
+                session(['usuario_id' => $funcionario->id_funcionario]);
                 return redirect()->route('gerenciamento');
             }
             else
             {
-                return redirect('/')->with('invalido', 'Login ou senha erradas!');
+                return redirect('/')->with('invalido', 'Login ou senha incorretos!');
             }
         }
        

@@ -21,10 +21,10 @@ class CriandoTabelaFilmes extends Migration
             $table->text('elenco');
             $table->string('categoria');
             $table->float('preco_aluguel', 4, 2);
-            $table->float('preço_venda', 4, 2);
+            $table->float('preco_venda', 4, 2);
             $table->boolean('disponibilidade');
-            $table->binary('imagem_capa');
-            $table->binary('upload');
+            $table->binary('capa_filme')->nullable;
+            $table->binary('upload')->nullable;
             $table->integer('funcionario_id')->unsigned(); //Unsigned = Números positivos
             $table->foreign('funcionario_id')->references('id_funcionario')->on('funcionarios');
             $table->timestamps();

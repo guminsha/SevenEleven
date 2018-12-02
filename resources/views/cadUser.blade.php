@@ -16,7 +16,7 @@
     </div>
     @endif
 	<div id="formulario">
-        <h1>Cadastro</h1>
+        <h1>Cadastro Cliente</h1>
         <i><p>Campos com '*' são campos de preenchimento obrigatório.</p></i>
         <form action="{{route('addCliente')}}" method="post">
             @csrf

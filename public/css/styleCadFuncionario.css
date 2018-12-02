@@ -1,9 +1,7 @@
 body{
 	background-image: url('../imagens/backgroundCad.png');
-	background-repeat: no-repeat;
 	background-size: 1920px 950px;
 	font-size: 18px;
-	overflow: hidden;
 }
 
 .form-row{
@@ -75,4 +73,14 @@ p{
 
 #divPermissao select{
 	width: 200px;
+}
+
+.dif{
+
+	margin: 8% 0% 0% 83%;
+	position: absolute;
+	color: red;
+	font-weight: bolder;
+	z-index: 100;
+
 }
