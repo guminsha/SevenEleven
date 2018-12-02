@@ -2,13 +2,13 @@
 <html>
 <head>
     <title>Login - Eleven Seven Locadora</title>
-    <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/styleLogin.css')}}" rel="stylesheet" type="text/css" />
     <meta charset="utf-8"/> 
 </head>
 <body>
     @if(session('invalido'))
     <div class="alert">
-        <strong>Login ou senha erradas!</strong>
+        <strong>{{session('invalido')}}</strong>
     </div>
     @endif
     @if($errors->any())
@@ -23,7 +23,7 @@
         <div id="divform" class="grid-container">
             <form action="{{route('validarLogin')}}" method="POST">
                 {{ csrf_field() }}
-                <input type="radio" value="user" class="grid-item userRadio" name="logintype" id="user" checked="true" /> <label for="user" class="grid-item userRadio"> USUÁRIO </label>
+                <input type="radio" value="user" class="grid-item userRadio" name="logintype" id="user" checked="true" /> <label for="user" class="grid-item userRadio"> CLIENTE </label>
                 <input type="radio" value="adm" class="grid-item admRadio"  name="logintype" id="adm"/> <label for="adm" class="grid-item admRadio"> ADMINISTRAÇÃO</label>
                 <br/>
                 <br/>

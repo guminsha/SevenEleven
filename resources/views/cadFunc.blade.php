@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>Cadastro de Funcionário - Eleven Seven</title>
-    <link href="{{asset('css/style5.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/styleCadFuncionario.css')}}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta charset=“utf-8”/>
 </head>
 <body>
     <div id="formulario">
         <h1>Cadastro Funcionário</h1>
-        <i><p>Campos com '*' são campos de preenchimento obrigatório.</p></i>
+        <i><p>*Todos os campos são de preenchimento obrigatório!</p></i>
         <form action="" method="post">
             <div class="form-row">
                 <div class="form-group col-md-4">
@@ -43,14 +43,25 @@
                     <input type="date" class="form-control" id="inputDataAdmi" required="true">
                 </div>
             </div>
+            <div id="divPermissao">
+                <div class="form-group col-md-3">
+                        <label for="inputCountry">Nível de Permissão:</label>
+                        <select id="inputCountry" class="form-control">
+                            <option selected>Escolher...</option>
+                            <option>1- Básica</option>
+                            <option>2- Intermediária</option>
+                            <option>3- Acesso Total</option>
+                        </select>
+                </div>
+            </div>
             <div id="divRadio">
                 <label for="">Sexo:</label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="true">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="M" checked="true">
                     <label class="form-check-label" for="inlineRadio1">Masculino</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="F">
                     <label class="form-check-label" for="inlineRadio2">Feminino</label>
                 </div>
             </div>

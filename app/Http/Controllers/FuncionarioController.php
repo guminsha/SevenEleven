@@ -10,4 +10,9 @@ class FuncionarioController extends Controller
     {
         return view('cadFunc');
     }
+
+    public function showGerenciamento()
+    {
+        return view('funcGerenciamento');
+    }
 }

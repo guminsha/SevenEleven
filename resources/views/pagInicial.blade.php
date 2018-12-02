@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Página Inicial - Eleven Seven</title>
-	<link href="{{asset('css/style4.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('css/styleHome.css')}}" rel="stylesheet" type="text/css" />
 	<meta charset="utf-8" />
 </head>
 

@@ -3,6 +3,7 @@ body{
 	background-repeat: no-repeat;
 	background-size: 1920px 950px;
 	font-size: 18px;
+	overflow: hidden;
 }
 
 .form-row{
@@ -64,4 +65,14 @@ p{
 #divRadio{
 	position: relative;
 	left: 1%;
+}
+
+#divPermissao{
+	position: absolute;
+	left: 30%;
+	bottom: 55%;
+}
+
+#divPermissao select{
+	width: 200px;
 }

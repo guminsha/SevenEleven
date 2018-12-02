@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Cadastro de Usuário - Eleven Seven</title>
-    <link href="{{asset('css/style2.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/styleCadUsuario.css')}}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta charset=“utf-8”/> 
 </head>
@@ -50,11 +50,11 @@
             <div id="divRadio">
                 <label for="">*Sexo:</label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sexo" id="inlineRadio1" value="option1">
+                    <input class="form-check-input" type="radio" name="sexo" id="inlineRadio1" value="M">
                     <label class="form-check-label" for="inlineRadio1">Masculino</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="sexo" id="inlineRadio2" value="option2">
+                    <input class="form-check-input" type="radio" name="sexo" id="inlineRadio2" value="F">
                     <label class="form-check-label" for="inlineRadio2">Feminino</label>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                 <div class="form-group col-md-3">
                     <label for="inputCountry">*País:</label>
                     <select id="inputCountry"   name="pais" class="form-control">
-                        <option value="">Escolher...</option>
+                        <option value="Escolher">Escolher...</option>
                         <option value="África do Sul">África do Sul</option>
                         <option value="Albânia">Albânia</option>
                         <option value="Alemanha">Alemanha</option>
@@ -249,14 +249,14 @@
                 <div class="form-group col-md-3">
                     <label for="inputState">*Estado:</label>
                     <select id="inputState" name="estado" class="form-control">
-                        <option value="">Escolher...</option>
+                        <option value="Escolher">Escolher...</option>
                         <option value="...">...</option>
                     </select>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputCity">*Cidade:</label>
                     <select id="inputCity" name="cidade" class="form-control">
-                        <option value="">Escolher...</option>
+                        <option value="Escolher">Escolher...</option>
                         <option value="...">...</option>
                     </select>
                 </div>

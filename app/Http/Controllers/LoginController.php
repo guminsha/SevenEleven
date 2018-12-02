@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Funcionario;
+use App\Models\Cliente;
 
 class LoginController extends Controller
 {
@@ -17,15 +19,37 @@ class LoginController extends Controller
             'email' => 'required|email',
             'senha' => 'required'
             ]);
-        if($request->email == "teste@teste.com" && $request->senha == "123")
-       {
-           session(['usuario' => 'Rougert']);
-            return redirect()->route('principal');
-       }
-       else
-       {
-            return redirect('/')->with('invalido', true);
-       }
+        //Executa o que tem abaixo se passar na validação \/
+
+        if($request->logintype == "user"){
+            $cliente = new Cliente;
+            $cliente = $cliente->autenticarCliente($request->email, $request->senha);
+            if($cliente != null)
+            {
+                session(['usuario' => $cliente->nome]);
+                return redirect()->route('principal');
+            }
+            else
+            {
+                return redirect('/')->with('invalido', 'Login ou senha erradas!');
+            }
+        } 
+        else if($request->logintype == "adm"){
+            $funcionario = new Funcionario; //Instanciando model
+            $funcionario = $funcionario->autenticarFuncionario($request->email, $request->senha);
+
+            if($funcionario != null)
+            {
+                session(['usuario' => $funcionario->nome]);
+                session(['usuario_permissao' => $funcionario->nivel_permissao]);
+                return redirect()->route('gerenciamento');
+            }
+            else
+            {
+                return redirect('/')->with('invalido', 'Login ou senha erradas!');
+            }
+        }
+       
     }
 
     public function logout(){

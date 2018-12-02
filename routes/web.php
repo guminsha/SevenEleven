@@ -26,11 +26,13 @@ Route::group(['prefix' => '/'], function(){
 });
 
 Route::group(['prefix' => 'vip','middleware' => ['login']], function(){
+
     Route::get('/planos', 'AtivarVipController@showPlanos')->name('planosVip');
     Route::post('/pagamento', 'AtivarVipController@showPagamento')->name('pagamentoVip');
+    Route::post('/efetuado', 'AtivarVipController@showEfetuado')->name('efetuadoVip');
 });
 
-Route::group(['prefix' =>'cliente','middleware' => ['login']], function(){
+Route::group(['prefix' =>'cliente'], function(){
 
     Route::get('/cadastrar', 'ClienteController@show')->name('paginaCadUser');
     Route::post('/salvar', 'ClienteController@cadastrar')->name('addCliente');
@@ -38,6 +40,7 @@ Route::group(['prefix' =>'cliente','middleware' => ['login']], function(){
 
 Route::group(['prefix' =>'funcionario','middleware' => ['login']], function(){
 
+    Route::get('/gerenciamento', 'FuncionarioController@showGerenciamento')->name('gerenciamento');
     Route::get('/cadastrar', 'FuncionarioController@show')->name('paginaCadFunc');    
 });
 
