@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run() {
         $this->call(EnderecosSeeder::class);
         $this->call(FuncionariosSeeder::class);
+        $this->call(FilmesSeeder::class);
     }
     
 }

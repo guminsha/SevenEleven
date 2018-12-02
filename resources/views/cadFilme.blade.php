@@ -55,6 +55,7 @@
                     <select id="inputCategoria" class="form-control" name="categoria">
                         <option selected value="Escolher">Escolher...</option>
                         <option value="Ação">Ação</option>
+                        <option value="Animação">Animação</option>
                         <option value="Aventura">Aventura</option>
                         <option value="Comedia">Comedia</option>
                         <option value="Drama">Drama</option>
