@@ -12,7 +12,13 @@ class AtivarVipController extends Controller
         return view('planosVip');
     } 
 
-    public function showEfetuado()
+    public function showEfetuadoBoleto(Request $request)
+    {
+
+        echo "Compra efetuada! Enviaremos um e-mail com mais informações.";
+    }
+
+    public function showEfetuadoCartao(Request $request)
     {
 
         echo "Compra efetuada! Enviaremos um e-mail com mais informações.";

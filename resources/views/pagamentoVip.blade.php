@@ -10,6 +10,15 @@
         <header>
         </header>
         <div id="divCorpo">
+        <img src="{{asset('imagens/logo.png')}}" alt="Logo" id="logo">
+        @if($errors->any())
+            <div class="dif">
+                <strong>Erro ao cadastrar Cliente!</strong>
+                @foreach($errors->all() as $erro)
+                <p> {{ $erro }} </p>
+                @endforeach
+            </div>
+        @endif
             <div class="textoComum">
                 <p>Olá, {{session('usuario')}}! Aqui estão mais informações sobre a compra:</p>
             </div>
@@ -42,12 +51,12 @@
             </div>
 
             <div id="boletoBancario">
-                <form action="{{route('efetuadoVip')}}" method="post">
+                <form action="{{route('efetuadoVipBoleto')}}" method="post">
                 @csrf
                 <div class="form-row">
                     <div class="form-group col-md-2">    
                        <label for="cpf" class="textoComum2">CPF:</label>
-                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX">
+                        <input type="text" class="form-control" id="cpf" name="cpfName" placeholder="XXX.XXX.XXX-XX">
                     </div>
                 </div>
                 <div id="divButtonBol">
@@ -57,34 +66,34 @@
             </div>
 
             <div id="cartaoCredito">
-                <form action="{{route('efetuadoVip')}}" method="post">
+                <form action="{{route('efetuadoVipCartao')}}" method="post">
                 @csrf
                         <h4> Informe os dados do cartão:</h4>
                         <div class="form-row">
                             <div class="form-group col-md-2">    
                                 <label for="cartao" class="textoComum2">Número do cartão:</label>
-                                <input type="text" class="form-control" id="cartao" name="cartao"  placeholder="XXXX XXXX XXXX XXXX">
+                                <input type="text" class="form-control" id="cartao" name="cartaoName"  placeholder="XXXX XXXX XXXX XXXX">
                             </div>                         
                             <div class="form-group col-md-2">
                                 <label for="mesCartao" class="textoComum2">Data de validade:</label>
-                                <input type="text" class="form-control" id="mesCartao" name="mesCartao" placeholder="MM" maxlength="2">
-                                <input type="text" class="form-control" id="anoCartao" name="anoCartao" placeholder="AAAA" minlength="4" maxlength="4">
+                                <input type="text" class="form-control" id="mesCartao" name="mesCartaoName" placeholder="MM" maxlength="2">
+                                <input type="text" class="form-control" id="anoCartao" name="anoCartaoName" placeholder="AAAA" minlength="4" maxlength="4">
                             </div>
                         </div>
                         <div id="tirarEspaco">
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="donoCartao" class="textoComum2">Nome do titular do cartão:</label>
-                                    <input type="text" class="form-control" id="donoCartao" name="donoCartao"  placeholder="Ex.: CARLOS A F DE OLIVEIRA">
+                                    <input type="text" class="form-control" id="donoCartao" name="donoCartaoName"  placeholder="Ex.: CARLOS A F DE OLIVEIRA">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="codigoCartao" class="textoComum2">Código de segurança:</label>
-                                    <input type="text" class="form-control" id="codigoCartao" name="codigoCartao"  minlength="3" maxlength="3">
+                                    <input type="text" class="form-control" id="codigoCartao" name="codigoCartaoName"  minlength="3" maxlength="3">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="parcelas"class="textoComum2">Quantidade de parcelas:</label><br />
-                                <select class="custom-select" id="tipoParcela" name="tipoParcela">
+                                <select class="custom-select" id="tipoParcela" name="tipoParcelaName">
                                     @foreach($tipoParcelas as $parcela)
                                     <option> {{$parcela}} </option>
                                     @endforeach

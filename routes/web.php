@@ -29,7 +29,8 @@ Route::group(['prefix' => 'vip','middleware' => ['login']], function(){
 
     Route::get('/planos', 'AtivarVipController@showPlanos')->name('planosVip');
     Route::post('/pagamento', 'AtivarVipController@showPagamento')->name('pagamentoVip');
-    Route::post('/efetuado', 'AtivarVipController@showEfetuado')->name('efetuadoVip');
+    Route::post('/efetuado', 'AtivarVipController@showEfetuadoBoleto')->name('efetuadoVipBoleto');
+    Route::post('/efetuado2', 'AtivarVipController@showEfetuadoCartao')->name('efetuadoVipCartao');
 });
 
 Route::group(['prefix' =>'cliente'], function(){

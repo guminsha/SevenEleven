@@ -14,8 +14,8 @@ body{
     color: black;
     padding: 1%;
     margin: 0.5%;
-    padding-bottom: 23.5%;
-    max-height: 920px;
+    padding-bottom: 15.5%;
+    max-height: 1100px;
 }
 
 #forma{
@@ -87,3 +87,21 @@ body{
 	text-align: center;
 }
 
+
+.dif{
+
+	margin: 8% 0% 0% 83%;
+	position: absolute;
+	color: red;
+	font-weight: bolder;
+	z-index: 100;
+
+}
+
+#logo{
+	width: 23%;
+	height: 18%;
+	position: relative;
+	left: 38%;
+	top: 22%;
+}
