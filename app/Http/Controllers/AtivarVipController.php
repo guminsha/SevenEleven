@@ -14,6 +14,7 @@ class AtivarVipController extends Controller
 
     public function showEfetuado()
     {
+
         echo "Compra efetuada! Enviaremos um e-mail com mais informações.";
     }
 
@@ -53,4 +54,6 @@ class AtivarVipController extends Controller
         $informacoesPlano->total_compra = $informacoesPlano->preco - $informacoesPlano->desconto;
         return view('pagamentoVip', $dados, ['infoPlano'=>$informacoesPlano]);
     }
+
 }
+

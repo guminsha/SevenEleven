@@ -42,8 +42,14 @@
             </div>
 
             <div id="boletoBancario">
-                <form action="{{route('efetuadoVip')}}" method="POST">
+                <form action="{{route('efetuadoVip')}}" method="post">
                 @csrf
+                <div class="form-row">
+                    <div class="form-group col-md-2">    
+                       <label for="cpf" class="textoComum2">CPF:</label>
+                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX">
+                    </div>
+                </div>
                 <div id="divButtonBol">
                     <button class="btn btn-primary" type="submit">Gerar Boleto</button>
                 </div>
@@ -51,34 +57,34 @@
             </div>
 
             <div id="cartaoCredito">
-                <form action="{{route('efetuadoVip')}}" method="POST">
+                <form action="{{route('efetuadoVip')}}" method="post">
                 @csrf
                         <h4> Informe os dados do cartão:</h4>
                         <div class="form-row">
                             <div class="form-group col-md-2">    
                                 <label for="cartao" class="textoComum2">Número do cartão:</label>
-                                <input type="text" class="form-control" id="cartao"  placeholder="XXXX XXXX XXXX XXXX">
+                                <input type="text" class="form-control" id="cartao" name="cartao"  placeholder="XXXX XXXX XXXX XXXX">
                             </div>                         
                             <div class="form-group col-md-2">
                                 <label for="mesCartao" class="textoComum2">Data de validade:</label>
-                                <input type="text" class="form-control" id="mesCartao"  placeholder="MM" maxlength="2">
-                                <input type="text" class="form-control" id="anoCartao" placeholder="AAAA" minlength="4" maxlength="4">
+                                <input type="text" class="form-control" id="mesCartao" name="mesCartao" placeholder="MM" maxlength="2">
+                                <input type="text" class="form-control" id="anoCartao" name="anoCartao" placeholder="AAAA" minlength="4" maxlength="4">
                             </div>
                         </div>
                         <div id="tirarEspaco">
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="donoCartao" class="textoComum2">Nome do titular do cartão:</label>
-                                    <input type="text" class="form-control" id="donoCartao" placeholder="Ex.: CARLOS A F DE OLIVEIRA">
+                                    <input type="text" class="form-control" id="donoCartao" name="donoCartao"  placeholder="Ex.: CARLOS A F DE OLIVEIRA">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="codigoCartao" class="textoComum2">Código de segurança:</label>
-                                    <input type="text" class="form-control" id="codigoCartao" minlength="3" maxlength="3">
+                                    <input type="text" class="form-control" id="codigoCartao" name="codigoCartao"  minlength="3" maxlength="3">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="parcelas"class="textoComum2">Quantidade de parcelas:</label><br />
-                                <select class="custom-select" id="tipoParcela">
+                                <select class="custom-select" id="tipoParcela" name="tipoParcela">
                                     @foreach($tipoParcelas as $parcela)
                                     <option> {{$parcela}} </option>
                                     @endforeach

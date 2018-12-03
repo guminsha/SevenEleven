@@ -1,8 +1,8 @@
 body{
-    background-image: url("../imagens/backgroundLogin.png");
+    background-image: url("../imagens/BackgroundInicial.png");
     background-size: 1920px 950px;
     color: white;
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: Myriad pro cursive;
 }
 
 
@@ -10,10 +10,12 @@ body{
     border: solid 2px white;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: Myriad pro cursive;
     color: black;
     padding: 1%;
     margin: 0.5%;
+    padding-bottom: 23.5%;
+    max-height: 920px;
 }
 
 #forma{
@@ -84,3 +86,4 @@ body{
 	padding: 10px;
 	text-align: center;
 }
+
